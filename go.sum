@@ -1,0 +1,4 @@
+github.com/bgould/tinygo-rotary-encoder v0.0.0-20221224155058-c26fcc9a3d20 h1:V+y/i2c6xdvTB/gmiYdlj1/lc9XVEPDysxe6+7U5Yt4=
+github.com/bgould/tinygo-rotary-encoder v0.0.0-20221224155058-c26fcc9a3d20/go.mod h1:vozFQeh667GysGEvJ6GKutjAOilleV5usLdxYan+XYM=
+github.com/sago35/tinygo-keyboard v0.0.0-20230523130006-ea336a62da23 h1:FCX0blGABQU1s8M1JstCbQNBq/FSGOqu3en4WYEtgJU=
+github.com/sago35/tinygo-keyboard v0.0.0-20230523130006-ea336a62da23/go.mod h1:+k0J2TB7oiwu3xx3esgw5Ts+3GgG5G/VwAZGcKFsSG8=
