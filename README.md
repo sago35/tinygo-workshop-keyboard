@@ -50,8 +50,7 @@ GitHub Actions でビルドされた Artifact > release-double-zipped をダウ�
 ### LSP / gopls 対応
 
 TinyGo は、 machine package などを GOROOT に配置しているため設定を行うまでは gopls 等でエラーが表示され machine.LED の定義元へのジャンプ等が出来ません。
-TinyGo は machine package など (Go を良く知っていても) 慣れていない package 構成であったり、 build-tag による分岐などが多いため LSP の設定をしておいた方が無難です。
-
+TinyGo は machine package など (Go を良く知っていても) 慣れていない package 構成であったり、 build-tag による分岐などが多いため TinyGo 用の LSP の設定をしておいた方が無難です。
 
 公式ドキュメントは以下にあります。
 
@@ -332,6 +331,7 @@ func main() {
   * 左上のピン : https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#pinout-and-design-files
 
 このサンプルは以下の回路を想定しています。
+Pullup 抵抗 (R) は 1 ～ 10K ぐらいで設定すると良いです。
 
 ![](./images/schema01.png)
 
