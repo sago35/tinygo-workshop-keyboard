@@ -24,7 +24,7 @@ TinyGo については、このページの記入時点の最新版である v0.
 * TinyGo
     * https://github.com/tinygo-org/tinygo/releases/tag/v0.27.0
 
-それぞれの実行対に PATH が通っていれば使うことができます。
+それぞれの実行体に PATH が通っていれば使うことができます。
 少し Version が古いですが以下も参考になると思います。
 
 * [TinyGo のインストール](https://qiita.com/sago35/items/92b22e8cbbf99d0cd3ef#tinygo-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
