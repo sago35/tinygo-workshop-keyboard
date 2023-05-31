@@ -331,6 +331,9 @@ func main() {
 * pico : GP0
   * 左上のピン : https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#pinout-and-design-files
 
+このサンプルは以下の回路を想定しています。
+
+![](./images/schema01.png)
 
 ## Pin 入力を使った USB HID Keyboard (入力を増やす)
 
@@ -378,6 +381,10 @@ func main() {
 }
 ```
 
+このサンプルは以下の回路を想定しています。
+
+![](./images/schema02.png)
+
 ## sago35/tinygo-keyboard を使う
 
 先ほどのコードのようなものを sago35/tinygo-keyboard を使って書いてみます。
@@ -391,6 +398,7 @@ $ go get -v github.com/sago35/tinygo-keyboard
 
 以下のコード (./07_gpiokeyboard) は、 Wio Terminal 用です。
 gpioPins で指定されるそれぞれのボタンが、 `d.AddGpioKeyboard` 時の keyboard.Keycode で指定されるキーとなります。
+gpioPins で指定されるそれぞれのボタンは、すべて Pullup されていて、押下で Low、離すと High になります。
 
 
 ```go
@@ -625,6 +633,10 @@ func main() {
 }
 ```
 
+このサンプルは以下の回路を想定しています。
+
+![](./images/schema03.png)
+
 ## matrix keyboard を sago35/tinygo-keyboard から扱う
 
 先ほどの例は以下のソース (./10_matrixkeyboard_wiokey) になります。
@@ -673,3 +685,11 @@ sgkey は `マトリクス+ダイオード(COL2ROW)` のため false (default �
 
 
 ## duplex matrix keyboard を扱う
+
+以下にコード例があるので参考にしてください。
+
+* [github.com/sago35/tinygo-keyboard/targets/sgkb/left/main.go](https://github.com/sago35/tinygo-keyboard/blob/main/targets/sgkb/left/main.go)
+
+想定する回路は以下の通りです。
+
+![](./images/schema04.png)
