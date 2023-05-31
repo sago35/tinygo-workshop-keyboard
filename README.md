@@ -331,9 +331,13 @@ func main() {
   * 左上のピン : https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#pinout-and-design-files
 
 このサンプルは以下の回路を想定しています。
-Pullup 抵抗 (R) は 1 ～ 10K ぐらいで設定すると良いです。
+Pullup 抵抗 (R) は 1 ～ 10K ぐらいで設定すると良いですが、上記コードでは `machine.PinInputPullup` を使っていて内部プルアップが有効となっているため抵抗を省略しても問題ありません。
 
 ![](./images/schema01.png)
+
+ブレッドボードでの接続例は以下です。
+
+![](./images/schema01b.png)
 
 ## Pin 入力を使った USB HID Keyboard (入力を増やす)
 
