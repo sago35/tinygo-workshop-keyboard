@@ -6,6 +6,8 @@ TinyGo 0.26 + Wio Terminal という組み合わせで技術書「基礎から�
 
 ----
 
+![](./images/sgkb-0.2.0.jpg)
+
 このページは 2023/06/02 に開催される Go Conference 2023 内の TinyGo で自作キーボードを作るハンズオン用の記事です。
 不明点は、このリポジトリの Issue や [twitter:sago35tk](https://twitter.com/sago35tk) で質問いただければサポートします。
 Twitter のハッシュタグは [#gocon](https://twitter.com/hashtag/gocon) および [#tinygo](https://twitter.com/hashtag/tinygo) です。
@@ -87,6 +89,8 @@ Vim (+ vim-lsp) の場合は github.com/sago35/tinygo.vim を使ってみてく�
 
 ### wiokey : Wio Terminal 向けオプション
 
+![](./images/wiokey.jpg)
+
 wiokey は Wio Terminal に 6 キー追加するためのボードです。
 無くてもハンズオン可能ですが、wiokey があると自作キーボード気分が盛り上がると思います。
 
@@ -96,6 +100,8 @@ wiokey は Wio Terminal に 6 キー追加するためのボードです。
 
 
 ### sgkey : XIAO RP2040 向けオプション
+
+![](./images/sgkey.jpg)
 
 sgkey は XIAO RP2040 などの XIAO 系ボードに 6 キーと液晶を追加するためのボードです。
 無くてもハンズオン可能ですが、 sgkey があると自作キーボード気分が盛り上がると思います。
@@ -660,6 +666,10 @@ func main() {
 	d.Loop(context.Background())
 }
 ```
+
+`d.AddMatrixKeyboard()` の引数の `keyboard.InvertDiode(true)` はダイオードの向きによって設定変更が必要です。
+wiokey は `マトリクス+ダイオード逆向き(ROW2COL)` のため true にする必要があります。
+sgkey は `マトリクス+ダイオード(COL2ROW)` のため false (default は false) にする必要があります。
 
 
 ## duplex matrix keyboard を扱う
