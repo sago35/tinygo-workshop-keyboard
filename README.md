@@ -252,6 +252,7 @@ you typed : there
 ここではマイコンボードを USB HID Keyboard (いわゆる USB 接続のキーボード) として扱うために machine/usb/hid/keyboard を用いた例を実行します。
 以下のソース (./04_usbhid_keyboard) を書き込んでみてください。
 接続後 5 秒経過した後、 `tinygo version` を実行します。
+`keyboard.Port()` が存在しない、というエラーが出る場合は TinyGo の Version を上げるか、 `keyboard.New()` に変更してください。
 
 ```go
 package main
