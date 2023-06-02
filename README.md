@@ -543,8 +543,17 @@ wiokey および sgkey はマトリクス配線によりキースイッチを接
 * SW5 / SW6 の読み込み
   * r3 を H に、 r1 と r2 を L にして、 c1 を読み込むと SW5、 c2 を読み込むと SW6 の状態が取得できます
 
+sgkey の場合は以下の通りです。
+
+* SW1 / SW2 / SW3 の読み込み
+  * r1 を H に、 r2 を L にして、 c1 を読み込むと SW1、 c2 を読み込むと SW2、 c3 を読み込むと SW3 の状態が取得できます
+* SW4 / SW5 / SW6 の読み込み
+  * r2 を H に、 r1 を L にして、 c1 を読み込むと SW4、 c2 を読み込むと SW5、 c3 を読み込むと SW6 の状態が取得できます
+
 実際のソースコード例を以下 (./09_matrix_wiokey) に作成しました。
 出力ピンの電位を切り替えた後は、電位が落ち着くまで少し待つ必要があることに注意が必要です。
+sgkey 版のソースは後述します。
+
 
 ```go
 package main
@@ -640,6 +649,11 @@ func main() {
 このサンプルは以下の回路を想定しています。
 
 ![](./images/schema03.png)
+
+
+sgkey 版のソースは以下になります。
+
+* [./09_matrix_sgkey/main.go](./09_matrix_sgkey/main.go) になります。
 
 ## matrix keyboard を sago35/tinygo-keyboard から扱う
 
